@@ -1,14 +1,45 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) 
 
 # **Project 1 - Building up your own game or application**
-
 ## **FLEX 125, March 5, 2022 - March 19th, 2022**
 
-## **Attendance**
+## **Overview (Eric)**
 
-There are no full-day classes during project weeks, but we expect you to be working on your at least the same as the same amount of time during class days and be available during that time for TA hours or any meetings with instructors as needed during project week office hours.
+Your first SEI project will start out with something fun - **a game!**
 
-We also will be holding Stand Up meetings with our Squads during project week to check attendance and to discuss our daily goals, our progress, and any issues we are facing. Your squad leaders will let you know when these will be!
+Thanks to the amount of logic there is in a game, there's no better app than a game to teach you how to **think like a programmer**!
+
+Everyone will get a chance to **be creative**, and work through some really **tough programming challenges**. You got your feet wet with Tic-Tac-Toe, and we built a game or two during class - now it's time to step it up a notch.
+
+**You will be working individually for this project**. However, your instructors and instructor assistants will be guiding you along with up to ten 15-minute one-on-one sessions. Be sure to use them wisely :).
+
+As a reminder, GA has a zero plagiarism policy - your project's code **must be substantially yours**. **Do not copy code from other similar projects or other sources**. However, using lines of code from StackOverflow to accomplish general techniques/algorithms is okay - an example would be using StackOverflow as a source for code that replaces a character at a certain position in a string.
+
+
+## **Project Week Format (Will)**
+
+- **Outcomes attendance is mandatory**. If you’re absent for Outcomes that will count as a full day absence, so please show up!
+- You **do not** need to submit any exit tickets during project week (ignore the automated Slack reminder)
+- You are required to communicate with your team **daily** (on the days we'd normally have class)! This may be in the form of a [daily stand-up](https://geekbot.com/blog/daily-standup-meeting/?k_id=dsa-910872033553&adgroup_id=96910465570&campaign_name_ad=10071775578&gclid=CjwKCAjwzvX7BRAeEiwAsXExo25ZchZ9JOgDt-esFT0qW6Dj36sgBtYkCHLhf-NPH4W7Cw1rKiWhkxoCXVUQAvD_BwE) or Standup Message Report. These will occur at 6:30pm ET on Tu/We and 11am ET on Sat in the Main classroom. Only Tuesday 3/8 is required to join for in classroom standups, otherwise you can submit a message report through the form to receive attendance credit for the day.
+- Following standups: we'll have several resources to increase your learning and development progress: we'll be opening up study rooms in the main classroom for people to work and help each other out - these are optional and not required. And we'll also have signup for office hours after these standups, see the below section for mroe details.
+- Projects must be submitted to the [gallery (via an issue)](https://git.generalassemb.ly/flex-125/project1-gallery/issues) by Saturday 3/19 at 8:00 am CST.
+- Project presentations will begin at 10:00 am EST on Saturday, 3/19. You must present your project at this time. If you do not show up for project presentations, your project will not be deemed as submitted and you will not be eligible for graduation.
+- If you are not able to complete your project by this time, you may request an extension to complete it by 3/26. If you are allowed this extension, you will be required to submit a video recording of yourself presenting the project, as well as a short written page that answers the questions that we will be asking you. Additionally, if your project that you present does not pass the MVP requirements, you will be given one resubmission throughout this course which must be completed with MVP requirements by Saturday, 3/27 and include a video submission of your project.
+- There will at times be optional lessons during project weeks held in the main classroom. These are optional (attendance is not marked) and will be recorded and posted. Some topics we'll cover are pushing to github(.com), authoring readmes, deploying apps via github pages. These will be announced on Slack and the class calendar ahead of time.
+- Use your section lead and IA to ask any logistical question that come up for you.
+
+
+### **Office Hours Appointments**
+
+Instructors will be hosting office hours during their regular times each day there is class of the project weeks. These will be based on a Slack signup queue and be 1-1 and maximum 15 min. Try to come as prepared as possible to quickly demonstrate your problem.
+
+> The purpose of this project is for you to show us and future employers what you're capable of, so we want as much of the project to be your own, independent work as possible. For this reason each student will recieve 6 office hours token for individual sessions. Standups, and and logistical
+
+### **Project Proposal**
+
+Create an issue in this repo using the **[Project Proposal** issue template](https://git.generalassemb.ly/flex-125/project-1/issues/) and submit it before the proposal submission deadline, Saturday, 3/5 at 9 am EST. Make sure you complete **all of the prompts**. Use the example proposal found [here](https://git.generalassemb.ly/flex-125/project-1/blob/master/project_proposal_example.md) as a guide.
+
+Your proposal will be reviewed by your Section team who will communicate feedback with you directly.
 
 ## **Project Details**
 
@@ -23,13 +54,13 @@ We also will be holding Stand Up meetings with our Squads during project week to
 3. Commits to Github every other day
 4. A `README.md` file with explanations of the technologies used, the approach taken, a link to your live site, installation instructions, unsolved problems, etc.
 
-# **Project #1: Build a Game with HTML, CSS, and JavaScript**
+# **Project #1: Build a Game with HTML, CSS, and JavaScript (Eric) **
 
 For your first project, you'll be creating a familiar game using HTML, CSS, and JS! You can create your own game or application, or you can select from one of the following:
 
-- **Flash Cards**
+- **Flash Cards aka "Memory" Game**
 - **War** (the card game)
-- **Trivia (Self-scoring)**
+- **Trivia **
 - **Blackjack**
 - **Simon** (warning: will require asynchronous timing)
 - **2048**
@@ -41,7 +72,7 @@ For your first project, you'll be creating a familiar game using HTML, CSS, and 
 
 The projects above are listed in the approximate order of difficulty from easiest to most challenging. Also, all of the games have numerous potential stretch features that can be worked on in terms of the logic and some of the edge cases that will require a fair amount of thinking.
 
-Projects not from this list must be approved by your Squad Leader before you begin
+Projects not from this list must be approved by your Section Team before you begin
 
 This is an opportunity to **be creative** and work through some **tough programming challenges**.
 
@@ -54,14 +85,6 @@ Warning - many seemingly simple games end up being much more complex than you mi
 Add an API to your project! If you would like to make an App that performs an API call instead of having a game function, you may send in a proposal with your idea to your squad leaders. All of the main project requirements (HTML, CSS, & JS files, daily commits, clean, working code) will still be applied. You may use any free API that you would like. Here is a good list of [Free Apis](https://github.com/toddmotto/public-apis)
 
 ## **Requirements**
-
-### **Project Proposal**
-
-Create an issue in this repo using the **[Project Proposal** issue template](https://git.generalassemb.ly/flex-323/project-1/issues/new?assignees=&labels=&template=proposal.md&title=Your+Name+-+Your+Squad+Lead) and submit it before the proposal submission deadline, Tuesday, 3/8 at 8 pm CST. Make sure you complete **all of the prompts**. Use the example proposal found [here](https://git.generalassemb.ly/flex-323/project-1/blob/master/project_proposal_example.md) as a guide.
-
-Your proposal will be reviewed by your squad leader who will communicate feedback with you directly.
-
-### **Project Requirements**
 
 Your app must:
 
@@ -77,22 +100,19 @@ Your app must:
 This is your project checklist. Make sure to revisit it before you submit your project! Your submission must include **all** of the following:
 
 - A game, built by you, hosted on Github Pages
-- Your JavaScript should be cleanly formatted (use Prettier!) and not contain excessive console.logs (you can search for them with command + F [or Ctrl + F on Windows/Ubuntu] and then remove them or comment them out).
 - A git repository hosted on Github with frequent commits dating back to the very beginning of the project (**at least one commit is required per class day of the project**).
 - A `README.md` file that includes the following sections:
     - [ ]  An embedded screenshot of the app
     - [ ]  List of the **Technologies used**
-    - [ ]  **Installation instructions**
     - [ ]  Your **User stories** – who are your users, what do they want, and why?
     - [ ]  Your **Wireframes** – sketches of major views/interfaces in your application
     - [ ]  Descriptions of any **Unsolved problems** or **major hurdles** you had to overcome
 - A link to your hosted project in the URL section of your Github repo.
 
-![https://media.giphy.com/media/WUsOlSNbPlE72OudJs/giphy.gif](https://media.giphy.com/media/WUsOlSNbPlE72OudJs/giphy.gif)
 
 ### **Project Submission**
 
-***DO NOT FORK THIS REPOSITORY!*** Create a **new** repository on your PERSONAL GitHub account (not GitHub Enterprise). Then, submit your project as an issue to [the project 1 gallery repository](https://git.generalassemb.ly/flex-323/project1-gallery).
+***DO NOT FORK THIS REPOSITORY!*** Create a **new** repository on your PERSONAL GitHub account (not GitHub Enterprise). Then, submit your project as an issue to [the project 1 gallery repository](https://git.generalassemb.ly/flex-125/project1-gallery).
 
 You must turn in something before presentations begin. However, you're welcome to continue working on it over the course of SEIR and beyond!
 
@@ -118,18 +138,8 @@ Be prepared to answer questions like:
 - How did you plan your project?
 - What did you learn?
 
-## **Project Week Format**
 
-- **Outcomes attendance is mandatory**. If you’re absent for Outcomes that will count as a full day absence, so please show up!
-- You **do not** need to submit any exit tickets during project week (ignore the automated Slack reminder)
-- You are required to communicate with your squad lead **daily** (on the days we'd normally have class)! This may be in the form of a [daily stand-up](https://geekbot.com/blog/daily-standup-meeting/?k_id=dsa-910872033553&adgroup_id=96910465570&campaign_name_ad=10071775578&gclid=CjwKCAjwzvX7BRAeEiwAsXExo25ZchZ9JOgDt-esFT0qW6Dj36sgBtYkCHLhf-NPH4W7Cw1rKiWhkxoCXVUQAvD_BwE) or Slack check-in. Your squad lead will provide more details.
-- Projects must be submitted to the [gallery (via an issue)](https://git.generalassemb.ly/flex-323/project1-gallery/issues) by Saturday 3/19 at 8:00 am CST.
-- Project presentations will begin at 9:00 am CST on Saturday, 3/19. You must present your project at this time. If you do not show up for project presentations, your project will not be deemed as submitted and you will not be eligible for graduation.
-- If you are not able to complete your project by this time, you may request an extension to complete it by 3/26. If you are allowed this extension, you will be required to submit a video recording of yourself presenting the project, as well as a short written page that answers the questions that we will be asking you. Additionally, if your project that you present does not pass the MVP requirements, you will be given one resubmission throughout this course which must be completed with MVP requirements by Saturday, 3/19 and include a video submission of your project.
-
-## **Recommendations for Success**
-
-*"True nobility comes not from being superior to your fellow man, but being superior to your former self" - Ernest Hemingway*
+## **Recommendations for Success (David)**
 
 - For those of you who entered GA SEIR as total beginners, think of this as a jumping-off point for you to build and complete something, and look back on it as you continue your growth as a developer. Do not compare yourself to anyone in the class! How complicated or simple anyone else's project is should have no effect on your end product. What matters more is how your projects grow and evolve over the course, not about how yours compares to the person sitting next to you
 - This is your first project and you don't have a good way to estimate how long individual tasks will take, there's no problem with under-promising and over-delivering! You can always add more features if time allows. However, if you focus on non-MVP features before your MVP is complete and run out of time, your submission will not satisfy the project requirements.
@@ -156,26 +166,7 @@ You are **responsible** for scheduling time with your squad to seek approval f
 
 [Untitled](https://www.notion.so/7860e2d31e854048a9baf44ff7155956)
 
-## **You must include a realistic timeframe and daily project goal in your project proposal to your squad leader!**
 
-## **Getting Help**
-
-### **Office Hours Appointments**
-
-Instructors will be hosting office hours during their regular times each day of the project week. Even if the class is not meeting regularly, at least one instructor will be available on the main Zoom chat at all times.
-
-The regular weekend office hours will also be available. Check the course schedule for more information.
-
-> The purpose of this project is for you to show us and future employers what you're capable of, so we want as much of the project to be your own, independent work as possible.
-> 
-
-### **Github Issues**
-
-We strongly encourage you to file a Github issue in this repository prior to asking the instructors for help directly.
-
-Having to articulate the question into words is very helpful in understanding the problem. Sometimes, simply articulating the question gives you the answer.
-
-More importantly, submitting issues, creating bug reports, and posting questions about code on platforms like stackoverflow.com is something you will do ***regularly*** when you're employed in the industry. Learning how to communicate about your code errors and issues is an essential skill that takes practice to get good at doing effectively and succinctly.
 
 ## **Plagiarism**
 
