@@ -1,7 +1,7 @@
 ---
 name: Project Proposal
 about: Project 1 proposal template
-title: Your Name - Your Squad Lead
+title: Your Name - Your Section Color
 labels: ''
 assignees: ''
 
@@ -9,11 +9,6 @@ assignees: ''
 
 ## Project Choice (Tell us which project you're doing!)
 
-- [ ] Flash Cards
-- [ ] Trivia (Self-scoring)
-- [ ] Spaceman
-- [ ] Tower of Hanoi
-- [ ] Simon
 
 ## Project Description 
 > A short description of your game.
