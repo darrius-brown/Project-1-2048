@@ -11,7 +11,7 @@ Thanks to the amount of logic there is in a game, there's no better app than a g
 
 Everyone will get a chance to **be creative**, and work through some really **tough programming challenges**. You got your feet wet with Tic-Tac-Toe, and we built a game or two during class - now it's time to step it up a notch.
 
-**You will be working individually for this project**. However, your instructors and instructor assistants will be guiding you along with up to ten 15-minute one-on-one sessions. Be sure to use them wisely :).
+**You will be working individually for this project**. However, your instructors and instructor assistants will be guiding you along with one-on-one sessions. Be sure to use them wisely :).
 
 As a reminder, GA has a zero plagiarism policy - your project's code **must be substantially yours**. **Do not copy code from other similar projects or other sources**. However, using lines of code from StackOverflow to accomplish general techniques/algorithms is okay - an example would be using StackOverflow as a source for code that replaces a character at a certain position in a string.
 
@@ -20,7 +20,7 @@ As a reminder, GA has a zero plagiarism policy - your project's code **must be 
 
 - **Outcomes attendance is mandatory**. If you’re absent for Outcomes that will count as a full day absence, so please show up!
 - You **do not** need to submit any exit tickets during project week (ignore the automated Slack reminder)
-- You are required to communicate with your team **daily** (on the days we'd normally have class)! This may be in the form of a [daily stand-up](https://geekbot.com/blog/daily-standup-meeting/?k_id=dsa-910872033553&adgroup_id=96910465570&campaign_name_ad=10071775578&gclid=CjwKCAjwzvX7BRAeEiwAsXExo25ZchZ9JOgDt-esFT0qW6Dj36sgBtYkCHLhf-NPH4W7Cw1rKiWhkxoCXVUQAvD_BwE) or Standup Message Report. These will occur at 6:30pm ET on Tu/We and 11am ET on Sat in the Main classroom. Only Tuesday 3/8 is required to join for in classroom standups, otherwise you can submit a message report through the form to receive attendance credit for the day.
+- You are required to communicate with your team **daily** (on the days we'd normally have class)! This may be in the form of a [daily stand-up](https://geekbot.com/blog/daily-standup-meeting/?k_id=dsa-910872033553&adgroup_id=96910465570&campaign_name_ad=10071775578&gclid=CjwKCAjwzvX7BRAeEiwAsXExo25ZchZ9JOgDt-esFT0qW6Dj36sgBtYkCHLhf-NPH4W7Cw1rKiWhkxoCXVUQAvD_BwE) or Standup Message Report. These will occur at 6:30pm ET on Tu/We and 11am ET on Sat in the Main classroom. Only Tuesday 3/8 is required to join for in classroom standups, otherwise you can submit a [message report](https://forms.gle/VH6bL6m4AdvcKg957) through the form to receive attendance credit for the day.
 - Following standups: we'll have several resources to increase your learning and development progress: we'll be opening up study rooms in the main classroom for people to work and help each other out - these are optional and not required. And we'll also have signup for office hours after these standups, see the below section for mroe details.
 - Projects must be submitted to the [gallery (via an issue)](https://git.generalassemb.ly/flex-125/project1-gallery/issues) by Saturday 3/19 at 8:00 am CST.
 - Project presentations will begin at 10:00 am EST on Saturday, 3/19. You must present your project at this time. If you do not show up for project presentations, your project will not be deemed as submitted and you will not be eligible for graduation.
@@ -33,11 +33,11 @@ As a reminder, GA has a zero plagiarism policy - your project's code **must be 
 
 Instructors will be hosting office hours during their regular times each day there is class of the project weeks. These will be based on a Slack signup queue and be 1-1 and maximum 15 min. Try to come as prepared as possible to quickly demonstrate your problem.
 
-> The purpose of this project is for you to show us and future employers what you're capable of, so we want as much of the project to be your own, independent work as possible. For this reason each student will recieve 6 office hours token for individual sessions. Standups, and and logistical
+> The purpose of this project is for you to show us and future employers what you're capable of, so we want as much of the project to be your own, independent work as possible. For this reason each student will recieve 6 office hours token for individual sessions. Standups, logistical questions, and TA office hours do not take a token from you.
 
 ### **Project Proposal**
 
-Create an issue in this repo using the **[Project Proposal** issue template](https://git.generalassemb.ly/flex-125/project-1/issues/) and submit it before the proposal submission deadline, Saturday, 3/5 at 9 am EST. Make sure you complete **all of the prompts**. Use the example proposal found [here](https://git.generalassemb.ly/flex-125/project-1/blob/master/project_proposal_example.md) as a guide.
+Create an issue in this repo using the **[Project Proposal** issue template](https://git.generalassemb.ly/flex-125/project-1/issues/) and submit it before the proposal submission deadline, Saturday, 3/5 at 9 am EST. Make sure you complete **all of the prompts** (if you're pressed, leave the Wireframes off and finish up by Monday). Use the example proposal found [here](https://git.generalassemb.ly/flex-125/project-1/blob/master/project_proposal_example.md) as a guide.
 
 Your proposal will be reviewed by your Section team who will communicate feedback with you directly.
 
@@ -60,7 +60,7 @@ For your first project, you'll be creating a familiar game using HTML, CSS, and 
 
 - **Flash Cards aka "Memory" Game**
 - **War** (the card game)
-- **Trivia **
+- **Trivia**
 - **Blackjack**
 - **Simon** (warning: will require asynchronous timing)
 - **2048**
@@ -68,6 +68,7 @@ For your first project, you'll be creating a familiar game using HTML, CSS, and 
 - **Tower of Hanoi**
 - **Checkers** (no AI required - player vs. player is fine)
 - **Solitaire**
+- **Wordle**
 - **Battleship** (would require a little AI to implement a computer opponent)
 
 The projects above are listed in the approximate order of difficulty from easiest to most challenging. Also, all of the games have numerous potential stretch features that can be worked on in terms of the logic and some of the edge cases that will require a fair amount of thinking.
