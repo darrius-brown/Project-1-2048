@@ -5,7 +5,6 @@ occupied = []
 let square0
 
 startingSquare()
-console.log(occupied)
 function fixOccupied(chooseSquare) {occupied.push(parseInt(chooseSquare.id))}
 
 function moveSquare(position, chooseSquare) {
@@ -15,7 +14,6 @@ function moveSquare(position, chooseSquare) {
     chooseSquare.style.gridColumn = `${column}`
     chooseSquare.style.gridRow = `${row}`
     chooseSquare.setAttribute('id',`${position}`)
-    
 }
 
 function gameMove() {
@@ -34,7 +32,6 @@ function gameMove() {
     } else if(occupied.includes(randomPlacement)){
         gameMove()
     }
-    console.log(occupied)
 }
 
 function getRandom() {
@@ -56,252 +53,271 @@ function startingSquare() {
     grid.appendChild(square)
     occupied.push(0)   //set 0 to occupied
 }
-//KeyCodes: KeyW KeyA KeyS KeyD ArrowUp ArrowDown ArrowLeft ArrowRight
+
 function pressedKey(event) {
-    console.log(event.code)
-    if(event.code === `KeyD`){
-        //Row 1
-        if(occupied.includes(3)){
-            console.log("hello3")
+    if(event.code === `KeyD` || event.code === `ArrowRight`){
+        rightMove(4)
+        rightMove(8)
+        rightMove(12)
+        rightMove(16)
+    }
+    if(event.code === `KeyA` || event.code === `ArrowLeft` ){
+        leftMove(-1)
+        leftMove(3)
+        leftMove(7)
+        leftMove(11)
+    }
+    if(event.code === `KeyW` || event.code === `ArrowUp`){
+        upMove(-1)
+        upMove(0)
+        upMove(1)
+        upMove(2)
+    }
+    if(event.code === `KeyS` || event.code === `ArrowDown`){
+        downMove(13)
+        downMove(14)
+        downMove(15)
+        downMove(16)
+    }
+    gameMove()
+}
+
+function rightMove(lastColumn) {
+        if(occupied.includes(lastColumn - 1)){
         }
 
-        if(occupied.includes(2)){
-            console.log("hello2")
-            if(occupied.includes(3)) {
+        if(occupied.includes(lastColumn - 2)){
+            // let mergeSquare = document.getElementById(lastColumn - 1)
+            let right2 = document.getElementById(lastColumn - 2)
+            if(occupied.includes(lastColumn - 1) && mergeSquare.innerHTML == right2.innerHTML  ) {
+                // mergeRight(right2, mergeSquare) 
+                // moveSquare(lastColumn - 1, right2)
+                // fixOccupied(right2)
                 //check value of 3
                 //merge or dont merge
             } else {
-                let square2 = document.getElementById(2)
-                moveSquare(3, square2)
-                fixOccupied(square2)
+                moveSquare(lastColumn - 1, right2)
+                fixOccupied(right2)
             }
         }
 
-        if(occupied.includes(1)){
-            console.log("hello1")
-            if(occupied.includes(2)) {
+        if(occupied.includes(lastColumn - 3)){
+            // let mergeSquare1 = document.getElementById(lastColumn - 2)
+            let right1 = document.getElementById(lastColumn - 3)
+            if(occupied.includes(lastColumn - 2) && mergeSquare.innerHTML == right1.innerHTML) {
+                // mergeRight(right1, mergeSquare1)
+                // moveSquare(lastColumn - 2, right1)
+                // fixOccupied(right1)
                 //check value of 3
                 //merge or dont merge
         } else {
-            let square1 = document.getElementById(1)
-            moveSquare(2, square1)
-            fixOccupied(square1)
-            if(occupied.includes(3)) {
+            
+            moveSquare(lastColumn - 2, right1)
+            fixOccupied(right1)
+            if(occupied.includes(lastColumn - 1)) {
                 //check value of 3
                 //merge or dont merge
             } else {
-                moveSquare(3, square1)
-                fixOccupied(square1)
+                moveSquare(lastColumn - 1, right1)
+                fixOccupied(right1)
             }
         }
         }
 
-        if(occupied.includes(0)){
-            console.log("hello0")
-            if(occupied.includes(1)) {
+        if(occupied.includes(lastColumn - 4)){
+            if(occupied.includes(lastColumn - 3)) {
                 //check value of 3
                 //merge or dont merge
         } else {
-            let square0 = document.getElementById(0)
-            moveSquare(1, square0)
-            fixOccupied(square0)
-            if(occupied.includes(2)) {
+            let right0 = document.getElementById(lastColumn - 4)
+            moveSquare(lastColumn - 3, right0)
+            fixOccupied(right0)
+            if(occupied.includes(lastColumn - 2)) {
                 //check value of 3
                 //merge or dont merge
         } else{
-            moveSquare(2, square0)
-            fixOccupied(square0)
-            if(occupied.includes(3)) {
+            moveSquare(lastColumn - 2, right0)
+            fixOccupied(right0)
+            if(occupied.includes(lastColumn - 1)) {
                 //check value of 3
                 //merge or dont merge
         } else{
-            moveSquare(3, square0)
-            fixOccupied(square0)
+            moveSquare(lastColumn - 1, right0)
+            fixOccupied(right0)
         }           
 }}}}
-    //Row 2
-    if(occupied.includes(7)){
-            
-        }
-
-        if(occupied.includes(6)){
-            if(occupied.includes(7)) {
-                //check value of 3
-                //merge or dont merge
-            } else {
-                let square6 = document.getElementById(6)
-                moveSquare(7, square6)
-                fixOccupied(square6)
-            }
-        }
-
-        if(occupied.includes(5)){
-            if(occupied.includes(6)) {
-                //check value of 3
-                //merge or dont merge
-        } else {
-            let square5 = document.getElementById(5)
-            moveSquare(6, square5)
-            fixOccupied(square5)
-            if(occupied.includes(7)) {
-                //check value of 3
-                //merge or dont merge
-            } else {
-                moveSquare(7, square5)
-                fixOccupied(square5)
-            }
-        }
-        }
-
-        if(occupied.includes(4)){
-            if(occupied.includes(5)) {
-                //check value of 3
-                //merge or dont merge
-        } else {
-            let square4 = document.getElementById(4)
-            moveSquare(5, square4)
-            fixOccupied(square4)
-            if(occupied.includes(6)) {
-                //check value of 3
-                //merge or dont merge
-        } else{
-            moveSquare(6, square4)
-            fixOccupied(square4)
-            if(occupied.includes(7)) {
-                //check value of 3
-                //merge or dont merge
-        } else{
-            moveSquare(7, square4)
-            fixOccupied(square4)
-        }
-               
-}}}
-    //Row 3
-    if(occupied.includes(11)){
-            
+function leftMove(lastColumn) {
+    if(occupied.includes(lastColumn + 1)){
     }
 
-    if(occupied.includes(10)){
-        if(occupied.includes(11)) {
+    if(occupied.includes(lastColumn + 2)){
+        if(occupied.includes(lastColumn + 1)) {
             //check value of 3
             //merge or dont merge
         } else {
-            let square10 = document.getElementById(10)
-            moveSquare(11, square10)
-            fixOccupied(square10)
+            let left2 = document.getElementById(lastColumn + 2)
+            moveSquare(lastColumn + 1, left2)
+            fixOccupied(left2)
         }
     }
 
-    if(occupied.includes(9)){
-        if(occupied.includes(10)) {
+    if(occupied.includes(lastColumn + 3)){
+        if(occupied.includes(lastColumn + 2)) {
             //check value of 3
             //merge or dont merge
     } else {
-        let square9 = document.getElementById(9)
-        moveSquare(10, square9)
-        fixOccupied(square9)
-        if(occupied.includes(11)) {
+        let left1 = document.getElementById(lastColumn + 3)
+        moveSquare(lastColumn + 2, left1)
+        fixOccupied(left1)
+        if(occupied.includes(lastColumn + 1)) {
             //check value of 3
             //merge or dont merge
         } else {
-            moveSquare(11, square9)
-            fixOccupied(square9)
+            moveSquare(lastColumn + 1, left1)
+            fixOccupied(left1)
         }
     }
     }
 
-    if(occupied.includes(8)){
-        if(occupied.includes(9)) {
+    if(occupied.includes(lastColumn + 4)){
+        if(occupied.includes(lastColumn + 3)) {
             //check value of 3
             //merge or dont merge
     } else {
-        let square8 = document.getElementById(8)
-        moveSquare(9, square8)
-        fixOccupied(square8)
-        if(occupied.includes(10)) {
+        let left0 = document.getElementById(lastColumn + 4)
+        moveSquare(lastColumn + 3, left0)
+        fixOccupied(left0)
+        if(occupied.includes(lastColumn + 2)) {
             //check value of 3
             //merge or dont merge
     } else{
-        moveSquare(10, square8)
-        fixOccupied(square8)
-        if(occupied.includes(11)) {
+        moveSquare(lastColumn + 2, left0)
+        fixOccupied(left0)
+        if(occupied.includes(lastColumn + 1)) {
             //check value of 3
             //merge or dont merge
     } else{
-        moveSquare(11, square8)
-        fixOccupied(square8)
-    }
-           
-}}}
-    //Row 4
-    if(occupied.includes(15)){
-            
+        moveSquare(lastColumn + 1, left0)
+        fixOccupied(left0)
+    }           
+}}}}
+function upMove(lastColumn) {
+    if(occupied.includes(lastColumn + 1)){
     }
 
-    if(occupied.includes(14)){
-        if(occupied.includes(15)) {
+    if(occupied.includes(lastColumn + 5)){
+        if(occupied.includes(lastColumn + 1)) {
             //check value of 3
             //merge or dont merge
         } else {
-            let square14 = document.getElementById(14)
-            moveSquare(15, square14)
-            fixOccupied(square14)
+            let up2 = document.getElementById(lastColumn + 5)
+            moveSquare(lastColumn + 1, up2)
+            fixOccupied(up2)
         }
     }
 
-    if(occupied.includes(13)){
-        if(occupied.includes(14)) {
+    if(occupied.includes(lastColumn + 9)){
+        if(occupied.includes(lastColumn + 5)) {
             //check value of 3
             //merge or dont merge
     } else {
-        let square13 = document.getElementById(13)
-        moveSquare(14, square13)
-        fixOccupied(square13)
-        if(occupied.includes(15)) {
+        let up1 = document.getElementById(lastColumn + 9)
+        moveSquare(lastColumn + 5, up1)
+        fixOccupied(up1)
+        if(occupied.includes(lastColumn + 1)) {
             //check value of 3
             //merge or dont merge
         } else {
-            moveSquare(15, square13)
-            fixOccupied(square13)
+            moveSquare(lastColumn + 1, up1)
+            fixOccupied(up1)
         }
     }
     }
 
-    if(occupied.includes(12)){
-        if(occupied.includes(13)) {
+    if(occupied.includes(lastColumn + 13)){
+        if(occupied.includes(lastColumn + 9)) {
             //check value of 3
             //merge or dont merge
     } else {
-        let square12 = document.getElementById(12)
-        moveSquare(13, square12)
-        fixOccupied(square12)
-        if(occupied.includes(14)) {
+        let up0 = document.getElementById(lastColumn + 13)
+        moveSquare(lastColumn + 9, up0)
+        fixOccupied(up0)
+        if(occupied.includes(lastColumn + 5)) {
             //check value of 3
             //merge or dont merge
     } else{
-        moveSquare(14, square12)
-        fixOccupied(square12)
-        if(occupied.includes(15)) {
+        moveSquare(lastColumn + 5, up0)
+        fixOccupied(up0)
+        if(occupied.includes(lastColumn + 1)) {
             //check value of 3
             //merge or dont merge
     } else{
-        moveSquare(15, square12)
-        fixOccupied(square12)
+        moveSquare(lastColumn + 1, up0)
+        fixOccupied(up0)
+    }           
+}}}}
+function downMove(lastColumn) {
+    if(occupied.includes(lastColumn - 1)){
     }
-           
-}}}
-}
+
+    if(occupied.includes(lastColumn - 5)){
+        if(occupied.includes(lastColumn - 1)) {
+            //check value of 3
+            //merge or dont merge
+        } else {
+        let down2 = document.getElementById(lastColumn - 5)
+            moveSquare(lastColumn - 1, down2)
+            fixOccupied(down2)
+        }
+    }
+
+    if(occupied.includes(lastColumn - 9)){
+        if(occupied.includes(lastColumn - 5)) {
+            //check value of 3
+            //merge or dont merge
+    } else {
+        let down1 = document.getElementById(lastColumn - 9)
+        moveSquare(lastColumn - 5, down1)
+        fixOccupied(down1)
+        if(occupied.includes(lastColumn - 1)) {
+            //check value of 3
+            //merge or dont merge
+        } else {
+            moveSquare(lastColumn - 1, down1)
+            fixOccupied(down1)
+        }
+    }
+    }
+    if(occupied.includes(lastColumn - 13)){
+        if(occupied.includes(lastColumn - 9)) {
+            //check value of 3
+            //merge or dont merge
+    } else {
+        let down0 = document.getElementById(lastColumn - 13)
+        moveSquare(lastColumn - 9, down0)
+        fixOccupied(down0)
+        if(occupied.includes(lastColumn - 5)) {
+            //check value of 3
+            //merge or dont merge
+    } else{
+        moveSquare(lastColumn - 5, down0)
+        fixOccupied(down0)
+        if(occupied.includes(lastColumn - 1)) {
+            //check value of 3
+            //merge or dont merge
+    } else{
+        moveSquare(lastColumn - 1, down0)
+        fixOccupied(down0)
+    }           
+}}}}
+// function mergeRight(checkSquare, deletedSquare){
+//     value = parseInt(checkSquare.innerHTML)
+//     value += value
+//     checkSquare.innerHTML = `${value}`
+//     deletedSquare.remove()
+// }
 button.addEventListener('click', gameMove)
-
-
 document.addEventListener('keydown', pressedKey)
 
-    // {
-    //     square0 = document.getElementById('0')
-    //     console.log(square0)
-    //     square0.style.gridColumn = 4
-    //     square0.style.gridRow = 1
-    //     square0.setAttribute('id',`3`)
-    // }
 
     
