@@ -8,9 +8,9 @@ gameMoveNoDefault()
 
 
 function fixOccupied(chooseSquare) {
+    if(occupied.includes((parseInt(chooseSquare.id))) === false)
     occupied.push(parseInt(chooseSquare.id))
-    console.log('fix occupied')}
-    
+}  
 
 function moveSquare(position, chooseSquare) {
     occupied = occupied.filter(index => index !== parseInt(chooseSquare.id))
@@ -72,7 +72,7 @@ function startingSquare() {
 }
 
 function pressedKey(event) {
-    console.log(occupied)
+startocc = occupied
     if(event.code === `KeyD` || event.code === `ArrowRight`){
         rightMove(4)
         rightMove(8)
@@ -97,10 +97,14 @@ function pressedKey(event) {
         downMove(15)
         downMove(16)
     }
-    let removeDups = [...new Set(occupied)]
-    occupied = removeDups
+    endocc = occupied
+    console.log(startocc)
+    console.log(endocc)
+    if(startocc !== endocc){
+        gameMove()
+    }
+    
     console.log(occupied)
-    gameMove()
     scoreBoard = document.querySelector('#score')
     scoreBoard.innerHTML = `Score:${score}`
 }
