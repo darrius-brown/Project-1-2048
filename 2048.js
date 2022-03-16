@@ -108,6 +108,7 @@ startocc = occupied
     if(score >= bestValue){
         best.innerHTML = `Best:${bestValue}`
     }
+    winCheck()
     endCheck()
     
 }
@@ -398,7 +399,6 @@ function endRowCheck() {
     if(checkRow0.innerHTML !== checkRow1.innerHTML){
         if(checkRow1.innerHTML !== checkRow2.innerHTML){
             if(checkRow2.innerHTML !== checkRow3.innerHTML){
-                console.log(`row with last column of ${i} cannot merge`)
                 endArray.push(true)
             }
         }
@@ -414,7 +414,6 @@ function endColumnCheck() {
     if(checkColumn0.innerHTML !== checkColumn1.innerHTML){
         if(checkColumn1.innerHTML !== checkColumn2.innerHTML){
             if(checkColumn2.innerHTML !== checkColumn3.innerHTML){
-                console.log(`Column with last row of ${i} cannot merge`)
                 endArray.push(true)
             }
         }
@@ -431,6 +430,15 @@ function endCheck(){
         console.log('gameover')
     }
 }
+}
+function winCheck(){
+    for(i = 0; i < occupied.length; i++) {
+        winSquare = document.getElementById(occupied[i])
+        console.log(winSquare.innerHTML)
+        if(winSquare.innerHTML == 2048) {
+            console.log('You Win')
+        }
+    }
 }
 
 document.addEventListener('keydown', pressedKey)
