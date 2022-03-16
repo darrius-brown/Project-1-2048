@@ -1,11 +1,11 @@
 const button = document.querySelector('.button')
 const grid = document.querySelector('.grid')
+const reloadButton = document.querySelector("button")
 score = 0
 occupied = []
 
 startingSquare()
 gameMoveNoDefault()
-
 
 function fixOccupied(chooseSquare) {
     if(occupied.includes((parseInt(chooseSquare.id))) === false)
@@ -98,15 +98,18 @@ startocc = occupied
         downMove(16)
     }
     endocc = occupied
-    console.log(startocc)
-    console.log(endocc)
     if(startocc !== endocc){
         gameMove()
     }
-    
-    console.log(occupied)
     scoreBoard = document.querySelector('#score')
+    best = document.querySelector('#best')
+    bestValue = score
     scoreBoard.innerHTML = `Score:${score}`
+    if(score >= bestValue){
+        best.innerHTML = `Best:${bestValue}`
+    }
+    endCheck()
+    
 }
 
 function rightMove(lastColumn) {
@@ -383,8 +386,55 @@ function mergeRight(checkSquare, deletedSquare){
     moveSquare(parseInt(deletedSquare.id), checkSquare)
     deletedSquare.remove()
 }
-button.addEventListener('click', gameMove)
+function reload() {
+    reload = location.reload();
+}
+function endRowCheck() {
+    for(i = 4; i < 17; i += 4){
+    let checkRow3 = document.getElementById(i - 1)
+    let checkRow2 = document.getElementById(i - 2)
+    let checkRow1 = document.getElementById(i - 3)
+    let checkRow0 = document.getElementById(i - 4)
+    if(checkRow0.innerHTML !== checkRow1.innerHTML){
+        if(checkRow1.innerHTML !== checkRow2.innerHTML){
+            if(checkRow2.innerHTML !== checkRow3.innerHTML){
+                console.log(`row with last column of ${i} cannot merge`)
+                endArray.push(true)
+            }
+        }
+    }         
+}
+}
+function endColumnCheck() {
+    for(i = 13; i < 17; i ++){
+    let checkColumn3 = document.getElementById(i - 1)
+    let checkColumn2 = document.getElementById(i - 5)
+    let checkColumn1 = document.getElementById(i - 9)
+    let checkColumn0 = document.getElementById(i - 13)
+    if(checkColumn0.innerHTML !== checkColumn1.innerHTML){
+        if(checkColumn1.innerHTML !== checkColumn2.innerHTML){
+            if(checkColumn2.innerHTML !== checkColumn3.innerHTML){
+                console.log(`Column with last row of ${i} cannot merge`)
+                endArray.push(true)
+            }
+        }
+    }         
+}
+}
+function endCheck(){
+    endArray = []
+    if(occupied.length === 16){
+        endRowCheck()
+        endColumnCheck()
+        console.log(endArray)
+        if(endArray.length === 8){
+        console.log('gameover')
+    }
+}
+}
+
 document.addEventListener('keydown', pressedKey)
+reloadButton.addEventListener('click', reload, false)
 
 
     
