@@ -453,16 +453,16 @@ function winCheckAndColorSet(){
             winSquare.style.color = 'white'
         }
         if(winSquare.innerHTML == 256){
-            winSquare.style.backgroundColor = 'yellow'
+            winSquare.style.backgroundColor = 'wheat'
             winSquare.style.color = 'white'
         }
         if(winSquare.innerHTML == 512){
             winSquare.style.backgroundColor = 'gold'
-            winSquare.style.color = 'black'
+            winSquare.style.color = 'white'
         }
         if(winSquare.innerHTML == 1024){
             winSquare.style.backgroundColor = 'silver'
-            winSquare.style.color = 'black'
+            winSquare.style.color = 'white'
         }
         if(winSquare.innerHTML == 2048){
             winSquare.style.backgroundColor = 'hotpink'
@@ -489,7 +489,6 @@ function winCheckAndColorSet(){
         }
     }
 }
-
 document.addEventListener('keydown', pressedKey)
 reloadButton.addEventListener('click', reload, false)
 
