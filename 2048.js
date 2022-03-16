@@ -6,12 +6,12 @@ occupied = []
 
 startingSquare()
 gameMoveNoDefault()
+winCheckAndColorSet()
 
 function fixOccupied(chooseSquare) {
     if(occupied.includes((parseInt(chooseSquare.id))) === false)
     occupied.push(parseInt(chooseSquare.id))
 }  
-
 function moveSquare(position, chooseSquare) {
     occupied = occupied.filter(index => index !== parseInt(chooseSquare.id))
     row = Math.floor((position / 4) + 1)
@@ -25,8 +25,6 @@ function gameMoveNoDefault() {
     const square = document.createElement('div')
     moveSquare(randomPlacement, square)
     square.className = ('game-square')
-    square.style.backgroundColor = 'red'
-    square.style.color = "black"
     square.innerHTML = `${randomValue[value]}`
     if(occupied.includes(randomPlacement) === false) {
         grid.appendChild(square)
@@ -42,8 +40,6 @@ function gameMove() {
     const square = document.createElement('div')
     moveSquare(randomPlacement, square)
     square.className = ('game-square')
-    square.style.backgroundColor = 'red'
-    square.style.color = "black"
     square.innerHTML = `${randomValue[value]}`
     if(occupied.includes(randomPlacement) === false) {
         grid.appendChild(square)
@@ -52,25 +48,20 @@ function gameMove() {
         gameMove()
     }
 }
-
 function getRandom() {
     randomPlacement = Math.floor(Math.random() * 16)
     value = Math.floor(Math.random() * 2)
     randomValue = [2, 4]
 }
-
 function startingSquare() {
     getRandom()
     const square = document.createElement('div')
     moveSquare(randomPlacement, square)
     square.className = ('game-square')
-    square.style.backgroundColor = 'red'
-    square.style.color = "black"
     square.innerHTML = `${randomValue[value]}`
     grid.appendChild(square)
     occupied.push(randomPlacement) 
 }
-
 function pressedKey(event) {
 startocc = occupied
     if(event.code === `KeyD` || event.code === `ArrowRight`){
@@ -108,11 +99,10 @@ startocc = occupied
     if(score >= bestValue){
         best.innerHTML = `Best:${bestValue}`
     }
-    winCheck()
+    winCheckAndColorSet()
     endCheck()
     
 }
-
 function rightMove(lastColumn) {
     let right2 = document.getElementById(lastColumn - 2)
     let right1 = document.getElementById(lastColumn - 3)
@@ -431,10 +421,69 @@ function endCheck(){
     }
 }
 }
-function winCheck(){
+function winCheckAndColorSet(){
     for(i = 0; i < occupied.length; i++) {
         winSquare = document.getElementById(occupied[i])
-        console.log(winSquare.innerHTML)
+        if(winSquare.innerHTML == 2){
+            winSquare.style.backgroundColor = 'white'
+            winSquare.style.color = 'black'
+        }
+        if(winSquare.innerHTML == 4){
+            winSquare.style.backgroundColor = 'tan'
+            winSquare.style.color = 'black'
+        }
+        if(winSquare.innerHTML == 8){
+            winSquare.style.backgroundColor = 'lightsalmon  '
+            winSquare.style.color = 'white'
+        }
+        if(winSquare.innerHTML == 16){
+            winSquare.style.backgroundColor = 'orange'
+            winSquare.style.color = 'white'
+        }
+        if(winSquare.innerHTML == 32){
+            winSquare.style.backgroundColor = 'red'
+            winSquare.style.color = 'white'
+        }
+        if(winSquare.innerHTML == 64){
+            winSquare.style.backgroundColor = 'firebrick'
+            winSquare.style.color = 'white'
+        }
+        if(winSquare.innerHTML == 128){
+            winSquare.style.backgroundColor = 'khaki '
+            winSquare.style.color = 'white'
+        }
+        if(winSquare.innerHTML == 256){
+            winSquare.style.backgroundColor = 'yellow'
+            winSquare.style.color = 'white'
+        }
+        if(winSquare.innerHTML == 512){
+            winSquare.style.backgroundColor = 'gold'
+            winSquare.style.color = 'black'
+        }
+        if(winSquare.innerHTML == 1024){
+            winSquare.style.backgroundColor = 'silver'
+            winSquare.style.color = 'black'
+        }
+        if(winSquare.innerHTML == 2048){
+            winSquare.style.backgroundColor = 'hotpink'
+            winSquare.style.color = 'white'
+        }
+        if(winSquare.innerHTML == 4096){
+            winSquare.style.backgroundColor = 'deepskyblue'
+            winSquare.style.color = 'white'
+        }
+        if(winSquare.innerHTML == 8192){
+            winSquare.style.backgroundColor = 'springgreen'
+            winSquare.style.color = 'white'
+        }
+        if(winSquare.innerHTML == 16384){
+            winSquare.style.backgroundColor = 'saddlebrown '
+            winSquare.style.color = 'white'
+        }
+        if(winSquare.innerHTML == 32768){
+            winSquare.style.backgroundColor = 'black'
+            winSquare.style.color = 'white'
+        }
         if(winSquare.innerHTML == 2048) {
             console.log('You Win')
         }
