@@ -1,13 +1,29 @@
 const button = document.querySelector('.button')
 const grid = document.querySelector('.grid')
 const reloadButton = document.querySelector("button")
-score = 0
-occupied = []
+let score = 0
+let occupied = []
+let winner = false
 
 startingSquare()
 gameMoveNoDefault()
 winCheckAndColorSet()
 
+const openModalLose = () => {
+    const modal = document.getElementById('modal-lose')
+    modal.style.display = 'block';
+}
+const openModalWin = () => {
+    const winModal = document.getElementById('modal-win')
+    winModal.style.display = 'block';
+    winner = true
+}
+const closeModal = () => {
+  const modal = document.getElementById('modal-lose')
+  modal.style.display = 'none'
+  const winModal = document.getElementById('modal-win')
+  winModal.style.display = 'none'
+}
 function fixOccupied(chooseSquare) {
     if(occupied.includes((parseInt(chooseSquare.id))) === false)
     occupied.push(parseInt(chooseSquare.id))
@@ -93,12 +109,8 @@ startocc = occupied
         gameMove()
     }
     scoreBoard = document.querySelector('#score')
-    best = document.querySelector('#best')
-    bestValue = score
     scoreBoard.innerHTML = `Score:${score}`
-    if(score >= bestValue){
-        best.innerHTML = `Best:${bestValue}`
-    }
+   
     winCheckAndColorSet()
     endCheck()
     
@@ -379,6 +391,7 @@ function mergeRight(checkSquare, deletedSquare){
 }
 function reload() {
     reload = location.reload();
+    closeModal()
 }
 function endRowCheck() {
     for(i = 4; i < 17; i += 4){
@@ -417,7 +430,7 @@ function endCheck(){
         endColumnCheck()
         console.log(endArray)
         if(endArray.length === 8){
-        console.log('gameover')
+            openModalLose()
     }
 }
 }
@@ -427,65 +440,95 @@ function winCheckAndColorSet(){
         if(winSquare.innerHTML == 2){
             winSquare.style.backgroundColor = 'white'
             winSquare.style.color = 'black'
+            winSquare.style.paddingTop = '15px'
+            winSquare.style.fontSize = '60px'
         }
         if(winSquare.innerHTML == 4){
             winSquare.style.backgroundColor = 'tan'
             winSquare.style.color = 'black'
+            winSquare.style.paddingTop = '15px'
+            winSquare.style.fontSize = '60px'
         }
         if(winSquare.innerHTML == 8){
             winSquare.style.backgroundColor = 'lightsalmon  '
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '15px'
+            winSquare.style.fontSize = '60px'
         }
         if(winSquare.innerHTML == 16){
             winSquare.style.backgroundColor = 'orange'
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '15px'
+            winSquare.style.fontSize = '60px'
         }
         if(winSquare.innerHTML == 32){
             winSquare.style.backgroundColor = 'red'
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '15px'
+            winSquare.style.fontSize = '60px'
         }
         if(winSquare.innerHTML == 64){
             winSquare.style.backgroundColor = 'firebrick'
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '15px'
+            winSquare.style.fontSize = '60px'
         }
         if(winSquare.innerHTML == 128){
             winSquare.style.backgroundColor = 'khaki '
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '15px'
+            winSquare.style.fontSize = '55px'
         }
         if(winSquare.innerHTML == 256){
             winSquare.style.backgroundColor = 'wheat'
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '15px'
+            winSquare.style.fontSize = '55px'
         }
         if(winSquare.innerHTML == 512){
             winSquare.style.backgroundColor = 'gold'
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '15px'
+            winSquare.style.fontSize = '55px'
         }
         if(winSquare.innerHTML == 1024){
-            winSquare.style.backgroundColor = 'silver'
+            winSquare.style.backgroundColor = 'purple'
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '25px'
+            winSquare.style.fontSize = '40px'
         }
         if(winSquare.innerHTML == 2048){
             winSquare.style.backgroundColor = 'hotpink'
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '25px'
+            winSquare.style.fontSize = '40px'
         }
         if(winSquare.innerHTML == 4096){
             winSquare.style.backgroundColor = 'deepskyblue'
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '25px'
+            winSquare.style.fontSize = '40px'
         }
         if(winSquare.innerHTML == 8192){
             winSquare.style.backgroundColor = 'springgreen'
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '25px'
+            winSquare.style.fontSize = '40px'
         }
         if(winSquare.innerHTML == 16384){
             winSquare.style.backgroundColor = 'saddlebrown '
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '30px'
+            winSquare.style.fontSize = '30px'
         }
         if(winSquare.innerHTML == 32768){
             winSquare.style.backgroundColor = 'black'
             winSquare.style.color = 'white'
+            winSquare.style.paddingTop = '30px'
+            winSquare.style.fontSize = '30px'
         }
-        if(winSquare.innerHTML == 2048) {
-            console.log('You Win')
+        if(winSquare.innerHTML == 64 && winner === false) {
+            openModalWin()
         }
     }
 }

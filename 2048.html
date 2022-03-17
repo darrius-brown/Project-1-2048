@@ -42,4 +42,20 @@
 
     <script src="2048.js"></script>
 </body>
+<div id="openModal-lose"></div>
+<div id="modal-lose">
+  <div id="modal-textbox-lose">
+    <h1>Game Over!</h1>
+    <button class="closeModal" onClick="reload()">Play Again?</button>
+  </div>
+</div>
+
+<div id="openModal-win"></div>
+<div id="modal-win">
+  <div id="modal-textbox-win">
+    <h1>Winner!</h1>
+    <button class="closeModal" onClick="reload()">Play Again?</button>
+    <button class="closeModal" onClick="closeModal()">Continue?</button>
+  </div>
+</div>
 </html>
