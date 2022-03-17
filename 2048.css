@@ -142,8 +142,6 @@ body {
   border-radius: 3px;
   padding: 10px;
   text-align: center;
-  padding-top: 15px;
-  font-size: 60px;
   font-weight: bold;
 }
 .how-to-play {
@@ -152,5 +150,48 @@ body {
   margin: auto;
   margin-top: 30px;
 }
-
-
+#modal-lose {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+  padding-top: 137px;
+  display: none;
+}
+#modal-textbox-lose {
+	background-color: rgba(248, 248, 248, 0.4);
+	height: 400px;
+	width: 470px;
+	border-radius: 2px;
+	margin: 150px auto;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding-top: 70px;
+}
+#modal-win {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+  padding-top: 137px;
+  display: none;
+  
+}
+#modal-textbox-win {
+	background-color: rgba(241, 221, 34, 0.4);
+	height: 400px;
+	width: 470px;
+	border-radius: 2px;
+	margin: 150px auto;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding-top: 70px;
+}
