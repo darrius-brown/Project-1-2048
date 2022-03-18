@@ -19,4 +19,5 @@ Coming features:
 * More levels! 5x5 grid and more!
 * Sliding animation added to squares
 * Convert code to JQuery
+* Download and play on your mobile device
 
