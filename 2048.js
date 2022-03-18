@@ -6,7 +6,7 @@ let occupied = []
 let winner = false
 
 startingSquare()
-gameMoveNoDefault()
+gameMove(false)
 winCheckAndColorSet()
 
 const openModalLose = () => {
@@ -36,21 +36,10 @@ function moveSquare(position, chooseSquare) {
     chooseSquare.style.gridRow = `${row}`
     chooseSquare.setAttribute('id',`${position}`)
 }
-function gameMoveNoDefault() {
-    getRandom()
-    const square = document.createElement('div')
-    moveSquare(randomPlacement, square)
-    square.className = ('game-square')
-    square.innerHTML = `${randomValue[value]}`
-    if(occupied.includes(randomPlacement) === false) {
-        grid.appendChild(square)
-        occupied.push(randomPlacement)
-    } else if(occupied.includes(randomPlacement)){
-        gameMoveNoDefault()
+function gameMove(isDefault) {
+    if(isDefault === true){
+        event.preventDefault()
     }
-}
-function gameMove() {
-    event.preventDefault()
     //Get random creates column, row, and value for a square
     getRandom()
     const square = document.createElement('div')
@@ -61,7 +50,7 @@ function gameMove() {
         grid.appendChild(square)
         occupied.push(randomPlacement)
     } else if(occupied.includes(randomPlacement)){
-        gameMove()
+        gameMove(true)
     }
 }
 function getRandom() {
@@ -106,7 +95,7 @@ startocc = occupied
     }
     endocc = occupied
     if(startocc !== endocc){
-        gameMove()
+        gameMove(true)
     }
     scoreBoard = document.querySelector('#score')
     scoreBoard.innerHTML = `Score:${score}`
@@ -119,8 +108,7 @@ function rightMove(lastColumn) {
     let right2 = document.getElementById(lastColumn - 2)
     let right1 = document.getElementById(lastColumn - 3)
     let right0 = document.getElementById(lastColumn - 4)
-        if(occupied.includes(lastColumn - 1)){
-        }
+
         if(occupied.includes(lastColumn - 2)){ 
             if(occupied.includes(lastColumn - 1)) {
                 let mergeRight1 = document.getElementById(lastColumn - 1)
@@ -534,6 +522,9 @@ function winCheckAndColorSet(){
 }
 document.addEventListener('keydown', pressedKey)
 reloadButton.addEventListener('click', reload, false)
+
+//testing git add
+
 
 
     
