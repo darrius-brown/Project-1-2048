@@ -1,1 +1,61 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="2048.css">
+    <title>2048</title>
+</head>
+<body>
+    <div class="title">
+        <h1>2048</h1>
+        <h1 id ='score'>Score: 0</h1>
+        <h1 id="best">Best: 0</h1>
+    </div>
+    <div class="sub-title">
+        <button>New Game</button>
+    </div>
+
+    <div class="grid">
+        <div class="placeholder1 gameboard" id="square"></div>
+        <div class="placeholder2 gameboard"></div>
+        <div class="placeholder3 gameboard"></div>
+        <div class="placeholder4 gameboard"></div>
+        <div class="placeholder5 gameboard"></div>
+        <div class="placeholder6 gameboard"></div>
+        <div class="placeholder7 gameboard"></div>
+        <div class="placeholder8 gameboard"></div>
+        <div class="placeholder9 gameboard"></div>
+        <div class="placeholder10 gameboard"></div>
+        <div class="placeholder11 gameboard"></div>
+        <div class="placeholder12 gameboard"></div>
+        <div class="placeholder13 gameboard"></div>
+        <div class="placeholder14 gameboard"></div>
+        <div class="placeholder15 gameboard"></div>
+        <div class="placeholder16 gameboard"></div>      
+    </div>
+
+    <footer class="footer">
+        <p class="how-to-play">HOW TO PLAY: Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!</p>
+    </footer>
+
+    <script src="2048.js"></script>
+</body>
+<div id="openModal-lose"></div>
+<div id="modal-lose">
+  <div id="modal-textbox-lose">
+    <h1>Game Over!</h1>
+    <button class="closeModal" onClick="reload()">Play Again?</button>
+  </div>
+</div>
+
+<div id="openModal-win"></div>
+<div id="modal-win">
+  <div id="modal-textbox-win">
+    <h1>Winner!</h1>
+    <button class="closeModal" onClick="reload()">Play Again?</button>
+    <button class="closeModal" onClick="closeModal()">Continue?</button>
+  </div>
+</div>
+</html>
