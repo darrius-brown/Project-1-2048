@@ -465,7 +465,7 @@ function winCheckAndColorSet(){
         }
         if(winSquare.innerHTML == 128){
             winSquare.style.backgroundColor = 'khaki '
-            winSquare.style.color = 'white'
+            winSquare.style.color = 'black'
             winSquare.style.paddingTop = '15px'
             winSquare.style.fontSize = '55px'
         }
