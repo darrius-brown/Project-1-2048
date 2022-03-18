@@ -4,6 +4,7 @@ const reloadButton = document.querySelector("button")
 let score = 0
 let occupied = []
 let winner = false
+winScore = 128
 
 startingSquare()
 gameMove(false)
@@ -99,9 +100,10 @@ startocc = occupied
     }
     scoreBoard = document.querySelector('#score')
     scoreBoard.innerHTML = `Score:${score}`
-   
+    closeModal()
     winCheckAndColorSet()
     endCheck()
+    
     
 }
 function rightMove(lastColumn) {
@@ -515,7 +517,7 @@ function winCheckAndColorSet(){
             winSquare.style.paddingTop = '30px'
             winSquare.style.fontSize = '30px'
         }
-        if(winSquare.innerHTML == 64 && winner === false) {
+        if(winSquare.innerHTML == winScore && winner === false) {
             openModalWin()
         }
     }
