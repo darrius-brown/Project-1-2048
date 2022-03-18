@@ -4,7 +4,7 @@ const reloadButton = document.querySelector("button")
 let score = 0
 let occupied = []
 let winner = false
-winScore = 128
+winScore = 2048
 
 startingSquare()
 gameMove(false)
