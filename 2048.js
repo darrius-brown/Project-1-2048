@@ -418,7 +418,6 @@ function endCheck(){
     if(occupied.length === 16){
         endRowCheck()
         endColumnCheck()
-        console.log(endArray)
         if(endArray.length === 8){
             openModalLose()
     }
