@@ -7,7 +7,7 @@ An easy to play math/puzzle game. Create 2048 and you win!
 This game was created using only vanilla JS, CSS, and HTML. DOM manipulation also plays a important role in this project. 
 
 ## Where to play
-[Play 2048](https://darriub15.github.io/)
+[Play 2048]([https://darriub15.github.io/](https://merry-duckanoo-a29fe7.netlify.app/))
 
 **Use the arrow keys (or WASD) to move the squares**
 
